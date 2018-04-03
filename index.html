@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.ico">
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?wredzy">
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?l708wn">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/comp.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+
+    <title>NewDesign</title>
+</head>
+<body>
+   <header>
+        <p id="burger" class="burger"></p>
+        <a href="index.html"><canvas id="canvas" width="130" height="130">
+        <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas></a>
+        <h1><a href="index.html">NewDesign</a></h1>
+        <!-- Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html"> Accueil</a></li>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="prix.html"> Prix</a></li>
+                <li><a href="equipe.html"> Notre Equipe</a></li>
+                <li><a href="avis.html"> Avis</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+		<div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/slide_1.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/slide_2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/slide_3.png" style="width:100%">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <section class="video">
+            <span>Vidéo</span>
+            <h2>Qui sommes nous ?</h2>
+            <video controls poster="images/image_video.png">
+                <source src="video/video_projet.mp4" type="video/mp4">
+                <source src="video/video_projet.webm" type="video/webm">
+            </video>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li class="socicon-facebook"></li>
+            <li class="socicon-twitter"></li>
+            <li class="socicon-googleplus"></li>
+            <li class="socicon-instagram"></li>
+            <li class="socicon-linkedin"></li>
+        </ul>
+        <p>Copyright © 2017 NewDesign Inc. Tous droits réservés. </p>
+    </footer>
+</body>
+
+<!-- Script JS Slide -->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000);
+}
+</script>
+
+</html>

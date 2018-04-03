@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.ico">
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?wredzy">
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?l708wn">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/comp.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+
+    <title>NewDesign</title>
+</head>
+<body>
+   <header>
+        <p id="burger" class="burger"></p>
+        <a href="index.html"><canvas id="canvas" width="130" height="130">
+        <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas></a>
+        <h1><a href="index.html">NewDesign</a></h1>
+        <!-- Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html"> Accueil</a></li>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="prix.html"> Prix</a></li>
+                <li><a href="equipe.html"> Notre Equipe</a></li>
+                <li><a href="avis.html"> Avis</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+		<!-- Formulaire -->
+            <section class="contact">
+                <span>Contact</span>
+                <h2>Entrez en contact</h2>
+                <form id="contact-form" action="#" class="text-center">
+                    <input name="nom" id="nom" type="text" placeholder="Nom*">
+                    <input name="mail" id="mail" type="email" placeholder="E-mail*">
+                    <textarea name="comment" id="comment" placeholder="Message"></textarea>
+                    <input class="button" type="submit" value="Envoyez Message">
+                </form>
+            </section>
+        <!-- Google Map -->
+            <div id="ouvrir"><h2 class="texte">Fermer la map</h2></div>
+            <div id="map_canvas" class="map_canvas"></div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li class="socicon-facebook"></li>
+            <li class="socicon-twitter"></li>
+            <li class="socicon-googleplus"></li>
+            <li class="socicon-instagram"></li>
+            <li class="socicon-linkedin"></li>
+        </ul>
+        <p>Copyright © 2017 NewDesign Inc. Tous droits réservés. </p>
+    </footer>
+
+<!-- Script JQuerry -->    
+    <script>
+        $(document).ready(function(){
+        $('#ouvrir').click(function(){
+            $('.map_canvas').fadeToggle("slow", "swing");
+        });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+        $('#ouvrir').click(function(){
+            $('.texte').text("Le range Map");
+        });
+        });
+    </script>
+
+</html>

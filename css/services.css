@@ -1,0 +1,86 @@
+/* Nos Avantages
+-------------------------------------------------------*/
+
+.services{
+	width: 100%;
+	height: 100%;
+	color: black;
+	margin-top: 120px;
+	text-align: center;
+}
+
+.services h2{
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	margin-top: 25px;
+}
+
+.services span {
+	color: #f36b21;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.services article{
+	width: 270px;
+	height: 250px;
+	display: inline-block;
+	margin-top: 75px;
+	margin-left: 12px;
+	margin-right: 12px;
+	border-style: solid;
+	background-color: white;
+}
+
+.services h3{
+	font-size: 20px;
+	margin-bottom: 35px;
+	text-transform: none;
+	letter-spacing: 0;
+	margin-top: 15px;
+}
+
+.services p{
+	margin-left: 13px;
+	margin-right: 13px;
+	color: #7a7a7a;
+}
+
+.services .fa{
+	color: #f36b21;
+	font-size: 3em;
+	margin-top: 15px;
+}
+
+/* RESPONSIVE DESKTOP
+****************************************/
+@media (min-width: 800px){
+
+.services article:hover {
+  box-shadow: 0 20px 40px rgba(72, 78, 85, 0.15);
+  -webkit-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -o-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
+footer{
+	height: 200px;
+}
+
+}
+
+/* RESPONSIVE MOBILE
+*****************************************************/
+
+@media (max-width: 800px){
+
+.services{
+  height: 100%;
+}
+
+.services article{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+}

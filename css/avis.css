@@ -1,0 +1,244 @@
+/* Avis Clients
+-------------------------------------------------------*/
+
+.avis{
+  width: 100%;
+  height: 100%;
+  color: black;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.avis h2{
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-top: 25px;
+}
+
+.avis span {
+  color: #f36b21;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.votre_avis{
+  width: 100%;
+  height: 100%;
+  color: black;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.votre_avis h2{
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-top: 25px;
+}
+
+.votre_avis span {
+  color: #f36b21;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* SLIDER D'AVIS
+*********************************************************/
+
+* {
+  box-sizing:border-box
+}
+
+header{
+  z-index: 2;
+}
+
+.mySlides {
+  display:none;
+  color: white;
+  text-align: center;
+  position: absolute;
+}
+
+div.mySlides.fade{
+  margin: 175px;
+  font-size: 2em;
+}
+
+div.mySlides.fade p{
+  font-style: italic;
+}
+
+div.mySlides.fade span{
+  color: #f36b21;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 75%;
+  height: 500px;
+  position: relative;
+  margin-top: 120px;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  background-image: url(../images/testimonials_bg.jpg);
+  border-radius: 10px;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Suivi du flux */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Animation Fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* RESPONSIVE MOBILE SLIDER
+*****************************************/
+
+@media (max-width: 1200px) {
+div.mySlides.fade{
+  margin : auto;
+  margin-top: 75px;
+}
+}
+
+/* FORUMULAIRE AVIS
+***************************************/
+
+.formulaire{
+  text-align: center;
+  width: 75%;
+  height: 530px;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-top: 50px;
+  background-color: white;
+  color: black;
+  border-style: solid;
+}
+
+.formulaire .text-center input{
+  margin-top: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+.notes,
+select,
+textarea {
+  height: 38px;
+  border: 2px solid transparent;
+  background-color: rgba(170,170,170,0.3);
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  color: black;
+  font-size: 13px;
+}
+
+textarea#comment {
+  height: 190px;
+  padding: 8px 16px;
+  margin-bottom: 34px;
+  margin-top: 34px;
+}
+
+/* VOTE ETOILES */
+
+.notes {
+  margin: auto;
+  width: 230px;
+  font-size: 30px;
+}
+
+.notes input {
+    display:none;
+    text-align: center;
+}
+
+.notes input[type="submit"]{ 
+  display:inline-block;
+  width:150px;
+  border-radius: 4px;
+  background-color: #f36b21;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  height: 58px;
+  margin-top: 20px;
+}
+
+.notes label {
+  float:right;
+  color: #aaa;
+  transition: color .4s;
+  width:30px;
+}
+
+.notes label:hover ~ label,
+.notes input:focus ~ label,
+.notes input:checked ~ label,
+.notes label:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.etoiles{
+  margin-right: 20px;
+}
+
+/* RESPONSIVE MOBILE
+*********************************************/
+
+@media (max-width: 800px){
+
+.avis{
+  margin-bottom: -75px;
+}
+
+div.mySlides.fade{
+  font-size: 1.7em;
+  margin-top: 55px;
+}
+
+.formulaire{
+  margin-bottom: 50px;
+}
+
+}

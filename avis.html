@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.ico">
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?wredzy">
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?l708wn">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/avis.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/comp.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+
+    <title>NewDesign</title>
+</head>
+<body>
+   <header>
+        <p id="burger" class="burger"></p>
+        <a href="index.html"><canvas id="canvas" width="130" height="130">
+        <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas></a>
+        <h1><a href="index.html">NewDesign</a></h1>
+        <!-- Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html"> Accueil</a></li>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="prix.html"> Prix</a></li>
+                <li><a href="equipe.html"> Notre Equipe</a></li>
+                <li><a href="avis.html"> Avis</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+	<!-- Avis clients -->
+        <section class="avis">
+            <span>Nos Avis</span>
+            <h2>Tous nos clients sont satisfaits</h2>
+        </section>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <p>"Je suis étonné, je dois vous dire merci pour mon site. Maintenant, il a un design si beau et soigné. NewDesign a su écouter et répondre à mes attentes. Ils sont vraiment incroyables et talentueux !"</p>
+              <span>Paul Lebrun / Professeur à l'Université</span>
+            </div>
+
+            <div class="mySlides fade">
+              <p>"Je voulais un site pour pouvoir mettre en avant ma musique et mon talent. NewDesign a su faire bien plus que ça. Ils m'ont offert un véritable chef-d'oeuvre."</p>
+              <span>Michel David / Chanteur Guitariste</span>
+            </div>
+
+            <div class="mySlides fade">
+              <p>"Maintenant, j'ai mon site perso, il est aussi beau que mes peintures ! Je voudrais vraiment remercier NewDesign pour leur professionnalisme!"</p>
+              <span>Charlotte Vilette / Peintre</span>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        <section class="votre_avis">
+            <span>Votre Avis</span>
+            <h2>Votre avis nous intéresse</h2>
+        </section>
+        <section class="formulaire">
+            <form id="contact-form" action="#" class="text-center">
+                <input name="nom" id="nom" type="text" placeholder="Nom*">
+                <input name="job" id="job" type="text" placeholder="Job*">
+                <textarea name="comment" id="comment" placeholder="Message"></textarea>
+            </form>
+            <form class="notes" name="notes" method="get" action="">
+                <div class="etoiles">
+                    <input id="note5" type="radio" name="note" value="5" />
+                    <label for="note5">★</label>
+                    <input id="note4" type="radio" name="note" value="4" />
+                    <label for="note4">★</label>
+                    <input id="note3" type="radio" name="note" value="3" />
+                    <label for="note3">★</label>
+                    <input id="note2" type="radio" name="note" value="2" />
+                    <label for="note2">★</label>
+                    <input id="note1" type="radio" name="note" value="1" />
+                    <label for="note1">★</label>
+                </div>
+                <input class="boutton" type="submit" value="Envoyez Avis">
+            </form>
+        </section>
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li class="socicon-facebook"></li>
+            <li class="socicon-twitter"></li>
+            <li class="socicon-googleplus"></li>
+            <li class="socicon-instagram"></li>
+            <li class="socicon-linkedin"></li>
+        </ul>
+        <p>Copyright © 2017 NewDesign Inc. Tous droits réservés. </p>
+    </footer>
+</body>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 6000);
+}
+</script>
+
+</html>
